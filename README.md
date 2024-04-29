@@ -16,3 +16,7 @@ if you have a higher version, just use ViaVersion, ViaBackwards and ViaRewind
 Step 1: Run `npm install` to install the dependencies.
 Step 2: Change the port number and IP address to the SERVER ADDRESS, otherwise it will not work.
 Step 3: Run `npm dev` to run the js file.
+
+## Disclamer
+i am not responsible if your server get deleted by aternos!
+USE IT AT YOUR OWN RISK!
