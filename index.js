@@ -1,3 +1,4 @@
+// made by stormxdev, forked from a nice guy actually but i edited it!
 const mineflayer = require('mineflayer');
 const cmd = require('mineflayer-cmd').plugin;
 const fs = require('fs');
