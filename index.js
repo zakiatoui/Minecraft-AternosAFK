@@ -1,8 +1,9 @@
 // made by stormxdev, forked from a nice guy actually but i edited it!
+
 const mineflayer = require('mineflayer');
 const cmd = require('mineflayer-cmd').plugin;
 const fs = require('fs');
-
+const keep_alive = require('./keep_alive.js')
 let rawdata = fs.readFileSync('config.json');
 let data = JSON.parse(rawdata);
 
@@ -68,6 +69,13 @@ function createBot() {
         connected = false;
         setTimeout(createBot, 5000); // Reconnect after 5 seconds
     });
+
+    bot.on('error', function(err) {
+        console.log("Error occurred:", err);
+        console.log("Attempting to log in again...");
+        connected = false;
+        setTimeout(createBot, 5000); // Retry after 5 seconds on error
+    });
 }
 
 function startBot() {
@@ -82,3 +90,4 @@ function attemptLogin() {
 
 // Begin attempting to log in
 attemptLogin();
+
